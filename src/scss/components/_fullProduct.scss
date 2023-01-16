@@ -1,1 +1,28 @@
+.fullProduct {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+    h2 {
+      margin-bottom: 15px;
+
+      span {
+        color: #a8a8a8;
+      }
+    }
+
+    img {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__discount-price {
+    color: #808080;
+
+    span {
+      color: #ff3451;
+    }
+  }
+}

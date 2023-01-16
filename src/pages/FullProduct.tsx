@@ -24,32 +24,42 @@ export const FullProduct: React.FC = () => {
   }, []);
 
   if (!product) {
-    return <>Загрузка...</>;
+    return (
+      <div className="fullProduct">
+        <div className="container">
+          <div className="fullProduct__inner">
+            <h2>Загрузка...</h2>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (
-    <div className="product">
-      <img
-        src={require(`.././assets/img/products/${product.imageUrl}.jpg`)}
-        alt="img"
-      />
-      <div className="product__text">
-        <h4>
-          {product.title}&nbsp;
-          {product.subtitle && <span>({product.subtitle})</span>}
-        </h4>
-        {product.isSoldOut ? (
-          <p className="product__price">SOLD OUT</p>
-        ) : !product.discountPrice ? (
-          <p className="product__price"> ${product.price}.00</p>
-        ) : (
-          <p className="product__price product__price--discount">
-            ${product.price}.00
-            {product.discountPrice && (
-              <span> &nbsp;${product.discountPrice}.00</span>
-            )}
-          </p>
-        )}
+    <div className="fullProduct">
+      <div className="container">
+        <div className="fullProduct__inner">
+          <h2>
+            {product.title}&nbsp;
+            {product.subtitle && <span>({product.subtitle})</span>}
+          </h2>
+          <img
+            src={require(`.././assets/img/products/${product.imageUrl}.jpg`)}
+            alt="img"
+          />
+          {product.isSoldOut ? (
+            <p>SOLD OUT</p>
+          ) : !product.discountPrice ? (
+            <p> ${product.price}.00</p>
+          ) : (
+            <p className="fullProduct__discount-price">
+              ${product.price}.00
+              {product.discountPrice && (
+                <span> &nbsp;${product.discountPrice}.00</span>
+              )}
+            </p>
+          )}
+        </div>
       </div>
     </div>
   );
