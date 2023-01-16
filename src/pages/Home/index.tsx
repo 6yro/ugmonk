@@ -53,7 +53,7 @@ export const Home: React.FC = () => {
 
   return (
     <div className="App">
-      <section className="product-intro">
+      {/* <section className="product-intro">
         <div className="container">
           <div className="product-intro__inner">
             <div className="product-intro__text">
@@ -96,7 +96,7 @@ export const Home: React.FC = () => {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="presentation-block presentation-block--light-gray">
         <div className="container">
@@ -112,7 +112,7 @@ export const Home: React.FC = () => {
           </div>
         </div>
       </section>
-
+      {/* 
       <section className="mission">
         <div className="container">
           <div className="mission__inner">
@@ -147,7 +147,7 @@ export const Home: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="presentation-block">
         <div className="container">
@@ -167,7 +167,7 @@ export const Home: React.FC = () => {
           </div>
         </div>
       </section>
-
+      {/* 
       <section className="history">
         <div className="container">
           <div className="history__inner">
@@ -186,11 +186,13 @@ export const Home: React.FC = () => {
       <section className="contact">
         <div className="container">
           <div className="contact__inner">
-            <h2 className="contact__title">Stay in the loop</h2>
-            <p className="contact__description">
-              Be the first to know when new products drop and get
-              behind-the-scenes content straight from Ugmonk’s founder.
-            </p>
+            <div className="contact__text">
+              <h2>Stay in the loop</h2>
+              <p>
+                Be the first to know when new products drop and get
+                behind-the-scenes content straight from Ugmonk’s founder.
+              </p>
+            </div>
             <div className="contact__form">
               <input type="email" placeholder="Enter your email" />
               <button>
@@ -337,7 +339,7 @@ export const Home: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

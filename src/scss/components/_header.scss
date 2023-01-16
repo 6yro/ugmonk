@@ -2,52 +2,91 @@
   font-size: 16px;
 
   &__inner {
+    border-right: 1px solid #1a1a1a;
     height: 115px;
-    margin: 0 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-  }
-}
 
-.menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-
-  &__products {
-    &-list {
-      display: flex;
+    .menu {
+      width: 830px;
       margin-left: 66px;
-    }
-    &-item {
-      margin: 0 16px;
-    }
-  }
-
-  &__links {
-    &-list {
       display: flex;
-    }
-    &-item {
-      display: flex;
+      justify-content: space-between;
       align-items: center;
-      padding: 0 13px;
 
-      &--search {
-        margin-right: 15px;
-        border-left: 1px solid #1a1a1a;
+      &__products {
+        &-list {
+          display: flex;
+        }
+        &-item {
+          margin: 0 16px;
+        }
       }
 
-      &--login {
-        margin-left: 15px;
-        border-right: 1px solid #1a1a1a;
-      }
-
-      :last-child {
+      &__block {
         display: flex;
-        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      &__search {
+        &-list {
+          display: flex;
+          align-items: center;
+          margin-right: 30px;
+        }
+        &-item {
+          &:first-child {
+            border-right: 1px solid #1a1a1a;
+          }
+          padding: 0 12px;
+        }
+      }
+
+      &__extra {
+        &-list {
+          display: flex;
+          align-items: center;
+        }
+        &-item {
+          &:first-child {
+            border-right: 1px solid #1a1a1a;
+          }
+          &:last-child {
+            position: relative;
+            top: 3px;
+          }
+          padding: 0 12px;
+        }
+      }
+    }
+
+    @media (max-width: 960px) {
+      border-right: none;
+      flex-direction: column;
+
+      .logo {
+        margin: 15px 0;
+      }
+
+      .menu {
+        margin-left: 0;
+        width: auto;
+
+        &__search-list {
+          margin-right: 0;
+        }
+      }
+    }
+
+    @media (max-width: 615px) {
+      height: 135px;
+
+      .menu {
+        flex-direction: column;
+
+        &__products-list {
+          margin-bottom: 10px;
+        }
       }
     }
   }

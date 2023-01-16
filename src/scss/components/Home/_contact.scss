@@ -1,44 +1,46 @@
 .contact {
+  padding: 80px 0 130px;
   background-color: #ced3ca;
 
   &__inner {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     text-align: center;
+  }
+
+  &__text {
+    margin-bottom: 56px;
+    max-width: 370px;
 
     h2 {
       font-size: 34px;
       line-height: 41px;
-      margin: 80px 0 10px;
+      margin-bottom: 20px;
     }
 
     p {
       font-size: 16px;
       line-height: 22px;
-      max-width: 370px;
-      margin: 10px 0 56px;
     }
   }
 
   &__form {
-    position: relative;
-    margin-bottom: 130px;
+    display: flex;
 
     input {
-      padding: 12px 192px 12px 18px;
+      padding: 12px 18px;
+      width: 338px;
       border: 1px solid #242424;
     }
 
     button {
+      position: relative;
       background-color: #fff;
       width: 66px;
       height: 42px;
-      border-radius: 0%;
       border: 1px solid #242424;
-      position: absolute;
-      right: -1px;
+      left: -1px;
       font-size: 24px;
       line-height: 24px;
       cursor: pointer;

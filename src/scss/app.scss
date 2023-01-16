@@ -7,9 +7,9 @@
 @import "components/Home/product-intro";
 @import "components/Home/products";
 @import "components/Home/history";
+@import "components/Home/mission";
 @import "components/Home/contact";
 @import "components/Home/footer";
-@import "components/Home/mission";
 
 .container {
   max-width: 1160px;
@@ -17,7 +17,14 @@
 
   &--header {
     max-width: 1240px;
-    border-right: 1px solid #1a1a1a;
+
+    @media (max-width: 1260px) {
+      margin: 0 20px;
+    }
+  }
+
+  @media (max-width: 1180px) {
+    margin: 0 20px;
   }
 }
 
@@ -83,6 +90,31 @@
   &--light-gray {
     .presentation-block__text {
       background-color: #f7f7f7;
+    }
+  }
+
+  @media (max-width: 1110px) {
+    padding: 45px 0;
+
+    &__inner {
+      flex-direction: column;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__text {
+      padding: 20px;
+      align-items: center;
+
+      h2 {
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin-bottom: 10px;
+      }
     }
   }
 }
