@@ -1,0 +1,249 @@
+{
+  "products": [
+    {
+      "id": "63c337151431b2f5010ea4c1",
+      "title": "velit qui irure ea",
+      "price": 42,
+      "imageUrl": 8,
+      "category": "new arrivals",
+      "discountPrice": 35
+    },
+    {
+      "id": "63c3371570f3d4ee6659cd06",
+      "title": "culpa minim magna dolore",
+      "price": 39,
+      "imageUrl": 4,
+      "category": "face masks",
+      "discountPrice": 35
+    },
+    {
+      "id": "63c337157e4278c205e7f317",
+      "title": "nulla sunt elit occaecat",
+      "price": 26,
+      "imageUrl": 12,
+      "category": "best sellers",
+      "discountPrice": 35
+    },
+    {
+      "id": "63c3371529d7fbc319ce128f",
+      "title": "minim non eiusmod tempor",
+      "price": 74,
+      "imageUrl": 8,
+      "category": "new arrivals",
+      "discountPrice": 35
+    },
+    {
+      "id": "63c33715fc7d3a4bcf791175",
+      "title": "eu laborum adipisicing dolor",
+      "price": 74,
+      "imageUrl": 11,
+      "category": "face masks",
+      "discountPrice": 35,
+      "subtitle": "Gray"
+    },
+    {
+      "id": "63c33715334eea430457144d",
+      "title": "deserunt sunt irure ad",
+      "price": 89,
+      "imageUrl": 11,
+      "category": "best sellers",
+      "discountPrice": 35,
+      "subtitle": "Gray"
+    },
+    {
+      "id": "63c33715bfe799d66770fcd2",
+      "title": "esse reprehenderit consectetur consectetur",
+      "price": 64,
+      "imageUrl": 19,
+      "category": "best sellers",
+      "discountPrice": 35,
+      "subtitle": "Gray"
+    },
+    {
+      "id": "63c33715d3918d50185c4419",
+      "title": "amet enim velit mollit",
+      "price": 57,
+      "imageUrl": 1,
+      "category": "face masks",
+      "discountPrice": 35,
+      "subtitle": "Gray"
+    },
+    {
+      "id": "63c33715e641130799a93343",
+      "title": "aute tempor labore occaecat",
+      "price": 89,
+      "imageUrl": 5,
+      "category": "new arrivals",
+      "subtitle": "Gray"
+    },
+    {
+      "id": "63c33715892640c1aaee4bfd",
+      "title": "esse minim in quis",
+      "price": 48,
+      "imageUrl": 19,
+      "category": "clothing",
+      "subtitle": "Gray"
+    },
+    {
+      "id": "63c33715fa8a5db40e111b15",
+      "title": "laboris irure laboris mollit",
+      "price": 13,
+      "imageUrl": 5,
+      "category": "clothing",
+      "subtitle": "Gray"
+    },
+    {
+      "id": "63c33715145f462dc2b8c3e8",
+      "title": "minim eiusmod velit consequat",
+      "price": 41,
+      "imageUrl": 5,
+      "category": "best sellers"
+    },
+    {
+      "id": "63c337152e06bce871d4c8a4",
+      "title": "proident magna laboris ipsum",
+      "price": 40,
+      "imageUrl": 5,
+      "category": "final stock"
+    },
+    {
+      "id": "63c33715db0e69173e87b298",
+      "title": "commodo quis exercitation non",
+      "price": 32,
+      "imageUrl": 1,
+      "category": "face masks"
+    },
+    {
+      "id": "63c33715406fda7cefd453aa",
+      "title": "sunt irure ea qui",
+      "price": 34,
+      "imageUrl": 5,
+      "category": "objects"
+    },
+    {
+      "id": "63c33715b2a6875fff4c631d",
+      "title": "velit laboris quis ullamco",
+      "price": 31,
+      "imageUrl": 7,
+      "category": "final stock"
+    },
+    {
+      "id": "63c337158158e2d3f4836ee2",
+      "title": "nostrud nisi esse irure",
+      "price": 77,
+      "imageUrl": 14,
+      "category": "clothing"
+    },
+    {
+      "id": "63c33715c509ddde4468cd6c",
+      "title": "pariatur proident commodo et",
+      "price": 53,
+      "imageUrl": 20,
+      "category": "objects"
+    },
+    {
+      "id": "63c33715e18481f3d4b9cb8d",
+      "title": "ut aliqua ipsum laboris",
+      "price": 98,
+      "imageUrl": 16,
+      "category": "objects"
+    },
+    {
+      "id": "63c337153b584e3250e66c9f",
+      "title": "culpa non nulla nulla",
+      "price": 86,
+      "imageUrl": 18,
+      "category": "best sellers"
+    },
+    {
+      "id": "63c337154c51f9e9c1a6bee6",
+      "title": "nisi ullamco cillum ea",
+      "price": 75,
+      "imageUrl": 19,
+      "category": "face masks"
+    },
+    {
+      "id": "63c337156b1d7d9b06a9f383",
+      "title": "enim laboris magna qui",
+      "price": 85,
+      "imageUrl": 12,
+      "category": "clothing"
+    },
+    {
+      "id": "63c3371518df07d081b9829b",
+      "title": "amet sit sunt occaecat",
+      "price": 74,
+      "imageUrl": 8,
+      "category": "best sellers"
+    },
+    {
+      "id": "63c337159dbc66d2780d4860",
+      "title": "consectetur laboris esse excepteur",
+      "price": 39,
+      "imageUrl": 6,
+      "category": "clothing"
+    },
+    {
+      "id": "63c33715926cd78625b34b5b",
+      "title": "ipsum ipsum qui commodo",
+      "price": 13,
+      "imageUrl": 2,
+      "category": "final stock"
+    },
+    {
+      "id": "63c33715d9dacf1b3d4d3b10",
+      "title": "nulla in est ea",
+      "price": 55,
+      "imageUrl": 14,
+      "category": "new arrivals"
+    },
+    {
+      "id": "63c337155a6302bd115c2ec0",
+      "title": "et voluptate esse reprehenderit",
+      "price": 11,
+      "imageUrl": 16,
+      "category": "clothing",
+      "isSoldOut": true
+    },
+    {
+      "id": "63c3371533a40cf7c34bffe1",
+      "title": "minim aliquip sit eiusmod",
+      "price": 23,
+      "imageUrl": 13,
+      "category": "final stock",
+      "isSoldOut": true
+    },
+    {
+      "id": "63c33715f6807b2cd5b134de",
+      "title": "nisi qui adipisicing culpa",
+      "price": 93,
+      "imageUrl": 15,
+      "category": "best sellers",
+      "isSoldOut": true
+    },
+    {
+      "id": "63c33715271d66634e469d3f",
+      "title": "tempor cupidatat labore sunt",
+      "price": 77,
+      "imageUrl": 3,
+      "category": "new arrivals",
+      "isSoldOut": true
+    },
+    {
+      "id": "63c3371589de4ab39812f14c",
+      "title": "esse nisi eiusmod nostrud",
+      "price": 99,
+      "imageUrl": 14,
+      "category": "objects",
+      "isSoldOut": true
+    },
+    {
+      "id": "63c337153237613c7e7a0d53",
+      "title": "magna sint magna culpa",
+      "price": 62,
+      "imageUrl": 5,
+      "category": "best sellers",
+      "isSoldOut": true
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+.gather {
+  background-color: #ced3ca;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 127px 0;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+  }
+
+  &__text {
+    max-width: 210px;
+    margin: 0 100px;
+  }
+
+  &__title {
+    font-size: 37px;
+    line-height: 46px;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    font-size: 15px;
+    line-height: 21px;
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 112px;
+
+    span {
+      border-top: 1px solid #1a1a1a;
+      padding-right: 80px;
+    }
+  }
+}

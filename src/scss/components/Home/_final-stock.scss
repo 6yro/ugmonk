@@ -1,0 +1,35 @@
+.final-stock {
+  background-color: #ced3ca;
+  display: flex;
+  justify-content: center;
+
+  &__inner {
+    display: flex;
+    padding: 127px 0;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #fff;
+
+    h2 {
+      margin: 0 95px 30px;
+      max-width: 250px;
+      font-size: 38px;
+      line-height: 46px;
+    }
+    a {
+      margin: 0 95px;
+      font-size: 14px;
+      line-height: 21px;
+
+      span {
+        border-top: 1px solid;
+        padding-right: 80px;
+      }
+    }
+  }
+}

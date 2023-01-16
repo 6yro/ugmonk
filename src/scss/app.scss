@@ -1,0 +1,24 @@
+@import "libs/normalize";
+
+@import "components/header";
+@import "components/notFound";
+@import "components/fullProduct";
+
+@import "components/Home/product-intro";
+@import "components/Home/products";
+@import "components/Home/history";
+@import "components/Home/gather";
+@import "components/Home/contact";
+@import "components/Home/footer";
+@import "components/Home/final-stock";
+@import "components/Home/mission";
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+
+  &--header {
+    max-width: 1240px;
+    border-right: 1px solid #1a1a1a;
+  }
+}

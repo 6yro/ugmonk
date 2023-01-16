@@ -1,0 +1,39 @@
+.product-intro {
+  background-image: url("../../../assets/img/product-intro__background.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &__inner {
+    margin: 0 10px;
+    // height: calc(100vh - 250px);
+    height: calc(100vw - 980px);
+    max-height: 760px;
+  }
+
+  &__text {
+    position: absolute;
+    bottom: 8px;
+
+    h2 {
+      margin: 2px 0;
+      font-size: 18px;
+      color: #fff;
+      line-height: 28px;
+      font-weight: 400;
+    }
+
+    a {
+      color: #fff;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 22px;
+
+      span {
+        border-top: 1px solid;
+        color: #fff;
+        padding-right: 63px;
+      }
+    }
+  }
+}
