@@ -36,7 +36,7 @@ export const FullProduct: React.FC = () => {
   }
 
   return (
-    <div className="fullProduct">
+    <section className="fullProduct">
       <div className="container">
         <div className="fullProduct__inner">
           <h2>
@@ -61,6 +61,6 @@ export const FullProduct: React.FC = () => {
           )}
         </div>
       </div>
-    </div>
+    </section>
   );
 };

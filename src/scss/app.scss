@@ -7,10 +7,8 @@
 @import "components/Home/product-intro";
 @import "components/Home/products";
 @import "components/Home/history";
-@import "components/Home/gather";
 @import "components/Home/contact";
 @import "components/Home/footer";
-@import "components/Home/final-stock";
 @import "components/Home/mission";
 
 .container {
@@ -20,5 +18,71 @@
   &--header {
     max-width: 1240px;
     border-right: 1px solid #1a1a1a;
+  }
+}
+
+.link-btn {
+  width: fit-content;
+
+  div {
+    width: fit-content;
+  }
+
+  p {
+    width: fit-content;
+    border-bottom: 1px solid #1a1a1a;
+    padding-right: 20px;
+  }
+
+  &--white {
+    p {
+      color: #fff;
+      border-bottom: 1px solid #fff;
+    }
+    span {
+      color: #fff;
+    }
+  }
+
+  &--small {
+    font-size: 14px;
+  }
+  &--medium {
+    font-size: 15px;
+  }
+  &--large {
+    font-size: 16px;
+  }
+}
+
+.presentation-block {
+  background-color: #ced3ca;
+  padding: 127px 0;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__text {
+    padding: 100px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h2 {
+      font-size: 37px;
+      line-height: 46px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
+
+  &--light-gray {
+    .presentation-block__text {
+      background-color: #f7f7f7;
+    }
   }
 }

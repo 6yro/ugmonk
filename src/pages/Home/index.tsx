@@ -1,6 +1,6 @@
 import React from "react";
 
-import gather__table from "../.././assets/img/gather__table.jpg";
+import gatherImg from "../.././assets/img/gather.jpg";
 import finalStockImg from "../.././assets/img/final-stock.jpg";
 import missionMenImg from "../.././assets/img/mission__men.jpg";
 import missionWomenImg from "../.././assets/img/mission__women.jpg";
@@ -58,9 +58,11 @@ export const Home: React.FC = () => {
           <div className="product-intro__inner">
             <div className="product-intro__text">
               <h2>Analog: The Simplest Productivity System</h2>
-              <Link to="/">
-                Learn more
-                <br />
+              <Link
+                to="/"
+                className="link-btn link-btn--medium link-btn--white"
+              >
+                <p>Learn more</p>
                 <span>→</span>
               </Link>
             </div>
@@ -96,14 +98,13 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      <section className="final-stock">
+      <section className="presentation-block presentation-block--light-gray">
         <div className="container">
-          <div className="final-stock__inner">
-            <div className="final-stock__description">
+          <div className="presentation-block__inner">
+            <div className="presentation-block__text">
               <h2>Final Stock - Up to 50% Off</h2>
-              <Link to="/" className="final-stock__link">
-                Shop the sale
-                <br />
+              <Link to="/" className="link-btn link-btn--small">
+                <p>Shop the sale</p>
                 <span>→</span>
               </Link>
             </div>
@@ -122,17 +123,15 @@ export const Home: React.FC = () => {
             <div className="mission__items-row">
               <div className="mission__item">
                 <img src={missionMenImg} alt="" />
-                <Link to="/" className="mission__item-link">
-                  Shop Mens
-                  <br />
+                <Link to="/" className="link-btn link-btn--large">
+                  <p>Shop Mens</p>
                   <span>→</span>
                 </Link>
               </div>
               <div className="mission__item">
                 <img src={missionWomenImg} alt="" />
-                <Link to="/" className="mission__item-link">
-                  Shop Womens
-                  <br />
+                <Link to="/" className="link-btn link-btn--large">
+                  <p>Shop Womens</p>
                   <span>→</span>
                 </Link>
               </div>
@@ -140,9 +139,8 @@ export const Home: React.FC = () => {
             <div className="mission__items-row">
               <div className="mission__item">
                 <img src={missionObjectsImg} alt="" />
-                <Link to="/" className="mission__item-link">
-                  Shop Objects
-                  <br />
+                <Link to="/" className="link-btn link-btn--large">
+                  <p>Shop Objects</p>
                   <span>→</span>
                 </Link>
               </div>
@@ -151,24 +149,21 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      <section className="gather">
+      <section className="presentation-block">
         <div className="container">
-          <div className="gather__inner">
-            <div className="gather__content">
-              <div className="gather__text">
-                <h2 className="gather__title">Gather</h2>
-                <p className="gather__description">
-                  The minimal, modular desk organizer that cuts through the
-                  clutter
-                </p>
-                <Link to="/" className="gather__link">
-                  Shop Gather
-                  <br />
-                  <span>→</span>
-                </Link>
-              </div>
-              <img src={gather__table} alt="" />
+          <div className="presentation-block__inner">
+            <div className="presentation-block__text">
+              <h2>Gather</h2>
+              <p>
+                The minimal, modular desk organizer that cuts through the
+                clutter
+              </p>
+              <Link to="/" className="link-btn link-btn--small">
+                <p>Shop Gather</p>
+                <span>→</span>
+              </Link>
             </div>
+            <img src={gatherImg} alt="img" />
           </div>
         </div>
       </section>
@@ -180,9 +175,8 @@ export const Home: React.FC = () => {
               A design studio in Downingtown, PA, creating and curating products
               that combine form & function
             </h2>
-            <Link to="/">
-              Read Our Story
-              <br />
+            <Link to="/" className="link-btn link-btn--medium link-btn--white">
+              <p>Read Our Story</p>
               <span>→</span>
             </Link>
           </div>
