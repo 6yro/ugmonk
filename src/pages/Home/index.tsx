@@ -6,14 +6,15 @@ import missionMenImg from "../.././assets/img/mission__men.jpg";
 import missionWomenImg from "../.././assets/img/mission__women.jpg";
 import missionObjectsImg from "../.././assets/img/mission__objects.jpg";
 
+import { ProductCard } from "./components/ProductCard";
+import { Skeleton } from "./components/Skeleton";
+import { Categories } from "./components/Categories";
+
 import { Link } from "react-router-dom";
 import { fetchProducts } from "../../redux/products/asyncActions";
 import { RootState, useAppDispatch } from "../../redux/store";
 import { useSelector } from "react-redux";
-
-import { ProductCard } from "./components/ProductCard";
-import { Skeleton } from "./components/Skeleton";
-import { Categories } from "./components/Categories";
+import { clearProducts } from "../../redux/products/slice";
 
 const categoriesList = [
   "New Arrivals",
@@ -29,14 +30,15 @@ export const Home: React.FC = () => {
   const { products, paginationLinks, status } = useSelector(
     (state: RootState) => state.products
   );
-  const { category } = useSelector((state: RootState) => state.category);
-
-  const currentCategory = categoriesList[category];
+  const [categoriesValue, setCategoriesValue] = React.useState(0);
+  const currentCategory = categoriesList[categoriesValue];
 
   React.useEffect(() => {
     dispatch(fetchProducts({ currentCategory, _page: 1 }));
-    console.log("было");
-  }, []);
+    return () => {
+      dispatch(clearProducts());
+    };
+  }, [categoriesValue]);
 
   const fetchPagination = (links: any) => {
     if (links.next) {
@@ -69,7 +71,11 @@ export const Home: React.FC = () => {
       <section className="products">
         <div className="container">
           <div className="products__inner">
-            <Categories categoriesList={categoriesList} value={category} />
+            <Categories
+              categoriesList={categoriesList}
+              value={categoriesValue}
+              setCategoriesValue={setCategoriesValue}
+            />
             <div className="products__items">
               {status === "success"
                 ? products.map((obj: any) => (

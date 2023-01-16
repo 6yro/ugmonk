@@ -1,10 +1,9 @@
 import { useDispatch } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import products from "./products/slice";
-import category from "./category/slice";
 
 export const store = configureStore({
-  reducer: { products, category },
+  reducer: { products },
 });
 
 export type RootState = ReturnType<typeof store.getState>;

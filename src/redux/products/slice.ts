@@ -1,6 +1,6 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { fetchProducts } from "./asyncActions";
-import { Product, ProductsSliceState, Status } from "./types";
+import { ProductsSliceState, Status } from "./types";
 
 const initialState: ProductsSliceState = {
   products: [],
@@ -12,9 +12,9 @@ export const productsSlice = createSlice({
   name: "products",
   initialState,
   reducers: {
-    // setProducts(state, action: PayloadAction<Product[]>) {
-    //   state.items = action.payload;
-    // },
+    clearProducts(state) {
+      state.products = [];
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchProducts.pending, (state) => {
@@ -43,6 +43,6 @@ export const productsSlice = createSlice({
   },
 });
 
-// export const { setProducts } = productsSlice.actions;
+export const { clearProducts } = productsSlice.actions;
 
 export default productsSlice.reducer;

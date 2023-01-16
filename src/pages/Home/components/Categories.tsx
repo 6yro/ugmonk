@@ -1,25 +1,23 @@
 import React from "react";
-import { setCategory } from "../../../redux/category/slice";
-import { useAppDispatch } from "../../../redux/store";
 
 type CategoriesProps = {
   categoriesList: string[];
   value: number;
+  setCategoriesValue(id: number): void;
 };
 
 export const Categories: React.FC<CategoriesProps> = ({
   categoriesList,
   value,
+  setCategoriesValue,
 }) => {
-  const dispatch = useAppDispatch();
-
   return (
     <ul className="products__categories">
-      {categoriesList.map((title, _id) => (
+      {categoriesList.map((title, id) => (
         <li
-          className={value === _id ? "active" : ""}
-          onClick={() => dispatch(setCategory(_id))}
-          key={_id}
+          className={value === id ? "active" : ""}
+          onClick={() => setCategoriesValue(id)}
+          key={id}
         >
           {title}
         </li>
