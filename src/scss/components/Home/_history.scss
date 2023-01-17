@@ -2,17 +2,16 @@
   background-image: url("../../../assets/img/history__background.jpg");
   background-size: cover;
   background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
-  &__inner {
-    margin: 0 10px;
-    height: calc(100vw - 980px);
-    max-height: 760px;
-
+  &__text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
 
     h2 {
       color: #fff;
@@ -24,5 +23,9 @@
     p {
       padding: 0px 10px !important;
     }
+  }
+
+  @media (max-width: 660px) {
+    height: 40vh;
   }
 }

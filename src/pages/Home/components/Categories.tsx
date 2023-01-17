@@ -12,6 +12,7 @@ export const Categories: React.FC<CategoriesProps> = ({
   setCategoriesValue,
 }) => {
   return (
+    // <div className="products__categories-wrapper">
     <ul className="products__categories">
       {categoriesList.map((title, id) => (
         <li
@@ -23,5 +24,6 @@ export const Categories: React.FC<CategoriesProps> = ({
         </li>
       ))}
     </ul>
+    // </div>
   );
 };

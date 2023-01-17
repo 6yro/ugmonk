@@ -2,14 +2,8 @@
   background-image: url("../../../assets/img/product-intro__background.jpg");
   background-size: cover;
   background-position: center;
+  height: 80vh;
   position: relative;
-
-  &__inner {
-    margin: 0 10px;
-    // height: calc(100vh - 250px);
-    height: calc(100vw - 980px);
-    max-height: 760px;
-  }
 
   &__text {
     position: absolute;
@@ -21,5 +15,9 @@
       color: #fff;
       line-height: 28px;
     }
+  }
+
+  @media (max-width: 660px) {
+    height: 40vh;
   }
 }

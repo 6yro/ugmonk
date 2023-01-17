@@ -53,19 +53,14 @@ export const Home: React.FC = () => {
 
   return (
     <div className="App">
-      {/* <section className="product-intro">
+      <section className="product-intro">
         <div className="container">
-          <div className="product-intro__inner">
-            <div className="product-intro__text">
-              <h2>Analog: The Simplest Productivity System</h2>
-              <Link
-                to="/"
-                className="link-btn link-btn--medium link-btn--white"
-              >
-                <p>Learn more</p>
-                <span>→</span>
-              </Link>
-            </div>
+          <div className="product-intro__text">
+            <h2>Analog: The Simplest Productivity System</h2>
+            <Link to="/" className="link-btn link-btn--medium link-btn--white">
+              <p>Learn more</p>
+              <span>→</span>
+            </Link>
           </div>
         </div>
       </section>
@@ -96,7 +91,7 @@ export const Home: React.FC = () => {
             </button>
           </div>
         </div>
-      </section> */}
+      </section>
 
       <section className="presentation-block presentation-block--light-gray">
         <div className="container">
@@ -112,7 +107,7 @@ export const Home: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* 
+
       <section className="mission">
         <div className="container">
           <div className="mission__inner">
@@ -147,7 +142,7 @@ export const Home: React.FC = () => {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       <section className="presentation-block">
         <div className="container">
@@ -167,19 +162,17 @@ export const Home: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* 
+
       <section className="history">
-        <div className="container">
-          <div className="history__inner">
-            <h2>
-              A design studio in Downingtown, PA, creating and curating products
-              that combine form & function
-            </h2>
-            <Link to="/" className="link-btn link-btn--medium link-btn--white">
-              <p>Read Our Story</p>
-              <span>→</span>
-            </Link>
-          </div>
+        <div className="history__text">
+          <h2>
+            A design studio in Downingtown, PA, creating and curating products
+            that combine form & function
+          </h2>
+          <Link to="/" className="link-btn link-btn--medium link-btn--white">
+            <p>Read Our Story</p>
+            <span>→</span>
+          </Link>
         </div>
       </section>
 
@@ -339,7 +332,7 @@ export const Home: React.FC = () => {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 };
