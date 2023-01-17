@@ -11,8 +11,9 @@ export const FullProduct: React.FC = () => {
     async function fetchProduct() {
       try {
         const { data } = await axios.get(
-          `http://localhost:3001/products/${id}`
+          `https://my-json-server.typicode.com/6yro/db.json/products/${id}`
         );
+
         setProduct(data);
       } catch (error) {
         alert("Ошибка при получении продукта!");
