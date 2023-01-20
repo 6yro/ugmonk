@@ -11,7 +11,7 @@ export const fetchProducts = createAsyncThunk(
     const category = currentCategory.toLowerCase();
 
     const resp = await axios.get(
-      `http://localhost:3001/products?category=${category}&_page=${_page}&_limit=8`
+      `https://my-json-server.typicode.com/6yro/db.json/products?category=${category}&_page=${_page}&_limit=8`
     );
 
     const paginationLinks = parse(`${resp.headers.link}`);
