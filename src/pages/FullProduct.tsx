@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { Product } from "../redux/products/types";
@@ -10,9 +10,9 @@ export const FullProduct: React.FC = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const { id } = useParams();
-  const [product, setProduct] = React.useState<Product>();
-  const [chosenColor, setChosenColor] = React.useState<string>();
-  const [chosenSize, setChosenSize] = React.useState<{
+  const [product, setProduct] = useState<Product>();
+  const [chosenColor, setChosenColor] = useState<string>();
+  const [chosenSize, setChosenSize] = useState<{
     size: string;
     inStock: boolean;
     price: number;
@@ -64,38 +64,35 @@ export const FullProduct: React.FC = () => {
             </h2>
             <div className="fullproduct__selector">
               <ul>
-                {product.colors.map(
-                  (color, id) =>
-                    color && (
-                      <li
-                        onClick={() => {
-                          setChosenColor(color);
-                        }}
-                        className={color === chosenColor ? "active" : ""}
-                        key={id}
-                      >
-                        {color}
-                      </li>
-                    )
-                )}
+                {product.colors.map((color, id) => (
+                  <li key={id}>
+                    <button
+                      onClick={() => {
+                        setChosenColor(color);
+                      }}
+                      className={color === chosenColor ? "active" : ""}
+                    >
+                      {color}
+                    </button>
+                  </li>
+                ))}
               </ul>
               <ul>
                 {product.sizes.map((obj, id) => (
-                  <li
-                    onClick={() => {
-                      setChosenSize(obj);
-                    }}
-                    className={
-                      obj.inStock === false
-                        ? "disabled"
-                        : chosenSize !== undefined &&
-                          chosenSize.size === obj.size
-                        ? "active"
-                        : ""
-                    }
-                    key={id}
-                  >
-                    {obj.size}
+                  <li key={id}>
+                    <button
+                      onClick={() => {
+                        setChosenSize(obj);
+                      }}
+                      disabled={obj.inStock === false}
+                      className={
+                        chosenSize !== undefined && chosenSize.size === obj.size
+                          ? "active"
+                          : ""
+                      }
+                    >
+                      {obj.size}
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -105,7 +102,7 @@ export const FullProduct: React.FC = () => {
             ) : (
               <p className="fullProduct__price">
                 {chosenSize && product.sizes
-                  ? chosenSize.price
+                  ? `$${chosenSize.price}`
                   : `$${product.sizes[0].price} - $${
                       product.sizes[product.sizes.length - 1].price
                     }`}
@@ -113,9 +110,24 @@ export const FullProduct: React.FC = () => {
             )}
             <button
               onClick={() => {
-                dispatch(addToCart({}));
+                chosenSize &&
+                  chosenColor &&
+                  dispatch(
+                    addToCart({
+                      title: product.title,
+                      subtitle: product.subtitle,
+                      imageUrl: product.imageUrl,
+                      color: chosenColor,
+                      size: chosenSize.size,
+                      price: chosenSize.price,
+                    })
+                  );
               }}
-              disabled={isSoldOut}
+              disabled={
+                isSoldOut ||
+                chosenSize === undefined ||
+                chosenColor === undefined
+              }
             >
               Add to cart
             </button>
