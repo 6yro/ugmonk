@@ -15,6 +15,7 @@ import { fetchProducts } from "../../redux/products/asyncActions";
 import { RootState, useAppDispatch } from "../../redux/store";
 import { useSelector } from "react-redux";
 import { clearProducts } from "../../redux/products/slice";
+import { Product } from "../../redux/products/types";
 
 const categoriesList = [
   "New Arrivals",
@@ -75,7 +76,7 @@ export const Home: React.FC = () => {
             />
             <div className="products__items">
               {status === "success"
-                ? products.map((obj: any) => (
+                ? products.map((obj: Product) => (
                     <ProductCard key={obj.id} {...obj} />
                   ))
                 : status === "loading"

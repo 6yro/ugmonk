@@ -1,18 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Product } from "../../../redux/products/types";
+import { isSoldOutProduct } from "../../../utils/isSoldOutProduct";
 
 export const ProductCard: React.FC<Product> = ({
   id,
   title,
   subtitle,
-  price,
   imageUrl,
-  discountPrice,
-  isSoldOut,
+  sizes,
 }) => {
   return (
-    <Link to={`product/${id}`} className="product">
+    <Link to={`product/${id}`} className="product-card">
       <img
         src={require(`../../.././assets/img/products/${imageUrl}.jpg`)}
         alt="img"
@@ -22,16 +21,11 @@ export const ProductCard: React.FC<Product> = ({
           {title}&nbsp;
           {subtitle && <span>({subtitle})</span>}
         </h4>
-        {isSoldOut ? (
-          <p className="product__price">SOLD OUT</p>
-        ) : !discountPrice ? (
-          <p className="product__price"> ${price}.00</p>
-        ) : (
-          <p className="product__price product__price--discount">
-            ${price}.00
-            {discountPrice && <span> &nbsp;${discountPrice}.00</span>}
-          </p>
-        )}
+        <p className="product__price">
+          {isSoldOutProduct(sizes)
+            ? "SOLD OUT"
+            : `$${sizes[0].price} - $${sizes[sizes.length - 1].price}`}
+        </p>
       </div>
     </Link>
   );

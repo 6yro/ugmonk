@@ -1,12 +1,17 @@
 export type Product = {
   id: string;
   title: string;
-  price: number;
+  subtitle: string;
   imageUrl: number;
   category: string;
-  subtitle?: string;
-  discountPrice?: number;
-  isSoldOut?: boolean;
+  colors: Array<string>;
+  sizes: ProductSize[];
+};
+
+export type ProductSize = {
+  size: string;
+  inStock: boolean;
+  price: number;
 };
 
 export enum Status {
