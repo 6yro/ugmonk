@@ -3,7 +3,7 @@ import ContentLoader from "react-content-loader";
 
 export const Skeleton: React.FC = () => (
   <ContentLoader
-    className="product"
+    className="product-card"
     speed={2}
     width={275}
     height={390}
