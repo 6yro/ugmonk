@@ -92,7 +92,7 @@ export const Header = () => {
                   <Link to="/">Login</Link>
                 </li>
                 <li className="menu__extra-item">
-                  <Link to="/">
+                  <Link to="/cart">
                     <svg
                       width="18"
                       height="18"

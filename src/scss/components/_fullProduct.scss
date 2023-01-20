@@ -2,27 +2,52 @@
   &__inner {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    text-align: center;
+  }
 
+  &__content {
     h2 {
-      margin-bottom: 15px;
-
       span {
         color: #a8a8a8;
       }
     }
+  }
 
-    img {
-      margin-bottom: 15px;
+  &__selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ul {
+      display: flex;
+      justify-content: center;
+      background-color: #f3f3f3;
+      width: fit-content;
+      margin: 10px 0;
+      padding: 8px;
+      li {
+        button {
+          background-color: #f3f3f3;
+          cursor: pointer;
+          width: 100px;
+          border: none;
+          padding: 6px;
+
+          &:disabled {
+            opacity: 0.2;
+            cursor: not-allowed;
+            color: black;
+          }
+
+          &.active {
+            background-color: #fff;
+          }
+        }
+      }
     }
   }
 
-  &__discount-price {
-    color: #808080;
-
-    span {
-      color: #ff3451;
-    }
+  &__addBtn {
+    margin-top: 10px;
   }
 }

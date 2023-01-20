@@ -62,20 +62,23 @@ export const FullProduct: React.FC = () => {
               {product.title}&nbsp;
               {product.subtitle && <span>({product.subtitle})</span>}
             </h2>
-            <div className="fullproduct__selector">
+            <div className="fullProduct__selector">
               <ul>
-                {product.colors.map((color, id) => (
-                  <li key={id}>
-                    <button
-                      onClick={() => {
-                        setChosenColor(color);
-                      }}
-                      className={color === chosenColor ? "active" : ""}
-                    >
-                      {color}
-                    </button>
-                  </li>
-                ))}
+                {product.colors.map(
+                  (color, id) =>
+                    color && (
+                      <li key={id}>
+                        <button
+                          onClick={() => {
+                            setChosenColor(color);
+                          }}
+                          className={color === chosenColor ? "active" : ""}
+                        >
+                          {color}
+                        </button>
+                      </li>
+                    )
+                )}
               </ul>
               <ul>
                 {product.sizes.map((obj, id) => (
@@ -109,17 +112,20 @@ export const FullProduct: React.FC = () => {
               </p>
             )}
             <button
+              className="fullProduct__addBtn"
               onClick={() => {
                 chosenSize &&
                   chosenColor &&
                   dispatch(
                     addToCart({
+                      id: product.id,
                       title: product.title,
                       subtitle: product.subtitle,
                       imageUrl: product.imageUrl,
                       color: chosenColor,
                       size: chosenSize.size,
                       price: chosenSize.price,
+                      value: 1,
                     })
                   );
               }}

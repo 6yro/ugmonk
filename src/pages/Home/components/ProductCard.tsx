@@ -16,12 +16,12 @@ export const ProductCard: React.FC<Product> = ({
         src={require(`../../.././assets/img/products/${imageUrl}.jpg`)}
         alt="img"
       />
-      <div className="product__text">
+      <div className="product-card__text">
         <h4>
           {title}&nbsp;
           {subtitle && <span>({subtitle})</span>}
         </h4>
-        <p className="product__price">
+        <p className="product-card__price">
           {isSoldOutProduct(sizes)
             ? "SOLD OUT"
             : `$${sizes[0].price} - $${sizes[sizes.length - 1].price}`}
